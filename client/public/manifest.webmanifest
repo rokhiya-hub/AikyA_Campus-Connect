@@ -1,0 +1,11 @@
+{
+  "id": "/",
+  "name": "AIKYA Campus",
+  "short_name": "AIKYA",
+  "start_url": "/notifications",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F7F7F5",
+  "theme_color": "#07579C",
+  "icons": [{ "src": "/aikya-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

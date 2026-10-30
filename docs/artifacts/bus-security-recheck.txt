@@ -1,0 +1,115 @@
+TAP version 13
+# Subtest: production configuration refuses missing secret/admin/origin before startup
+ok 1 - production configuration refuses missing secret/admin/origin before startup
+  ---
+  duration_ms: 267.5528
+  type: 'test'
+  ...
+# Subtest: production executable exits before database access when required configuration is absent
+ok 2 - production executable exits before database access when required configuration is absent
+  ---
+  duration_ms: 1659.5524
+  type: 'test'
+  ...
+# Subtest: Helmet, exact CORS and JSON body limits apply to the API
+ok 3 - Helmet, exact CORS and JSON body limits apply to the API
+  ---
+  duration_ms: 916.5515
+  type: 'test'
+  ...
+# Subtest: admin and faculty login still issue usable sessions without exposing hashes
+ok 4 - admin and faculty login still issue usable sessions without exposing hashes
+  ---
+  duration_ms: 491.1673
+  type: 'test'
+  ...
+# Subtest: every resource rejects anonymous mutations and faculty admin-only mutations
+ok 5 - every resource rejects anonymous mutations and faculty admin-only mutations
+  ---
+  duration_ms: 110.5424
+  type: 'test'
+  ...
+# Subtest: faculty may update their own profile and timetable but cannot escalate privileges
+ok 6 - faculty may update their own profile and timetable but cannot escalate privileges
+  ---
+  duration_ms: 87.9642
+  type: 'test'
+  ...
+# Subtest: admin CRUD works across all resource schemas and records safe audit entries
+ok 7 - admin CRUD works across all resource schemas and records safe audit entries
+  ---
+  duration_ms: 585.7655
+  type: 'test'
+  ...
+# Subtest: unknown fields, MongoDB operators, invalid IDs/query values and invalid records are rejected
+ok 8 - unknown fields, MongoDB operators, invalid IDs/query values and invalid records are rejected
+  ---
+  duration_ms: 58.285
+  type: 'test'
+  ...
+# Subtest: public lists/details omit hostel private data and faculty login details even with an admin token
+ok 9 - public lists/details omit hostel private data and faculty login details even with an admin token
+  ---
+  duration_ms: 36.3099
+  type: 'test'
+  ...
+# Subtest: pagination preserves array responses and bounded literal search
+ok 10 - pagination preserves array responses and bounded literal search
+  ---
+  duration_ms: 9.0605
+  type: 'test'
+  ...
+# {"event":"query_log_unavailable","requestId":"49cdd1bf-fff4-4903-9ece-22401efccafc"}
+# Subtest: chat logs stay admin-only and logging failure preserves a successful answer
+ok 11 - chat logs stay admin-only and logging failure preserves a successful answer
+  ---
+  duration_ms: 11.0182
+  type: 'test'
+  ...
+# {"event":"request_failed","requestId":"a1e3d8c3-a576-4aa7-b3eb-43d35cc7fcbc","status":503}
+# Subtest: audit unavailability blocks writes before data changes
+ok 12 - audit unavailability blocks writes before data changes
+  ---
+  duration_ms: 3.641
+  type: 'test'
+  ...
+# Subtest: local seed guards reject production, remote targets and unconfirmed resets
+ok 13 - local seed guards reject production, remote targets and unconfirmed resets
+  ---
+  duration_ms: 0.9771
+  type: 'test'
+  ...
+# Subtest: insert-only seed upserts are idempotent and preserve owner edits
+ok 14 - insert-only seed upserts are idempotent and preserve owner edits
+  ---
+  duration_ms: 2.0436
+  type: 'test'
+  ...
+# Subtest: login/chat rate limits return 429 and proxy trust remains disabled
+ok 15 - login/chat rate limits return 429 and proxy trust remains disabled
+  ---
+  duration_ms: 424.9377
+  type: 'test'
+  ...
+# {"event":"request_failed","requestId":"40c7acd6-3549-40ed-9ca3-46c2d38fde80","status":500}
+# Subtest: central errors do not disclose driver/provider messages or query data
+ok 16 - central errors do not disclose driver/provider messages or query data
+  ---
+  duration_ms: 4.8588
+  type: 'test'
+  ...
+# Subtest: AI retrieval uses public projections even if persistence returns private fields
+ok 17 - AI retrieval uses public projections even if persistence returns private fields
+  ---
+  duration_ms: 4.7117
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6115.431

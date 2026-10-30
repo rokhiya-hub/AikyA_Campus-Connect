@@ -1,0 +1,30 @@
+
+> campusx-client@1.0.0 build
+> vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 2314 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                               1.32 kB │ gzip:   0.69 kB
+dist/assets/aditya_campus_map-mgAf28M8.png  490.58 kB
+dist/assets/leaflet-CIGW-MKW.css             15.61 kB │ gzip:   6.46 kB
+dist/assets/index-C4wOYRYM.css               77.55 kB │ gzip:  14.15 kB
+dist/assets/DataStatus-Ds6PT2Pv.js            0.47 kB │ gzip:   0.31 kB
+dist/assets/Events-DhfDWJfm.js                2.17 kB │ gzip:   1.07 kB
+dist/assets/Hostels-nJPS5kfT.js               2.58 kB │ gzip:   1.22 kB
+dist/assets/Departments-CLih6AMH.js           3.10 kB │ gzip:   1.41 kB
+dist/assets/Faculty-BODEA9iC.js               4.19 kB │ gzip:   1.74 kB
+dist/assets/Canteen-B99sd-hl.js               4.65 kB │ gzip:   1.87 kB
+dist/assets/AIConsole-C7WFy7xy.js             5.29 kB │ gzip:   2.15 kB
+dist/assets/Dashboard-4tMx4Yr_.js             7.79 kB │ gzip:   2.85 kB
+dist/assets/Buses-BA9f0KF1.js                 8.60 kB │ gzip:   3.66 kB
+dist/assets/DriverTracking-4k6_HoQV.js        8.75 kB │ gzip:   3.34 kB
+dist/assets/Landing-q8zWv0_R.js              14.93 kB │ gzip:   4.95 kB
+dist/assets/CampusMap-CHZOTscs.js            23.91 kB │ gzip:   8.33 kB
+dist/assets/CampusMap-Ccrt3NoJ.js            30.19 kB │ gzip:  10.12 kB
+dist/assets/Admin-DrtLPd9n.js                43.66 kB │ gzip:  11.86 kB
+dist/assets/leaflet-DA9rbXRs.js             149.59 kB │ gzip:  43.36 kB
+dist/assets/index-BftJtKaD.js               366.43 kB │ gzip: 118.16 kB
+✓ built in 4.70s

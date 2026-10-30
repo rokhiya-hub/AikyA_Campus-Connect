@@ -1,0 +1,6 @@
+
+> campusx-server@1.0.0 test:tracking:local
+> powershell -NoProfile -File scripts/run-tracking-mongo-test.ps1
+
+{"event":"request_failed","requestId":"c7a38e80-b6cb-4353-a226-134603a5b115","status":500}
+Mongo tracking integration PASS: real replica-set transactions and failure rollback, concurrent dispatch uniqueness, current/history persistence, retention deadline and end-trip privacy.

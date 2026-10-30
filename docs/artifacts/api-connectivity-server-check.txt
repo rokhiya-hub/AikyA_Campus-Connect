@@ -1,0 +1,5 @@
+
+> campusx-server@1.0.0 check
+> node scripts/check.js
+
+Syntax checked 56 server files (seed files parsed, never executed).

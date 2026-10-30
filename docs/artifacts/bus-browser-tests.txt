@@ -1,0 +1,5 @@
+
+> campusx-client@1.0.0 test:bus-browser
+> node browser-tests/bus-smoke.cjs
+
+Bus browser smoke PASS: mobile real Leaflet bus marker, route browsing, stale/offline marker removal, unavailable ETA, explicit driver consent, authorized foreground GPS and Stop; no page errors/overflow. Synthetic fixtures only.
