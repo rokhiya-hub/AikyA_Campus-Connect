@@ -1,0 +1,414 @@
+
+> campusx-server@1.0.0 test
+> node --test
+
+TAP version 13
+# Subtest: production tracking requires HTTPS browser origins
+ok 1 - production tracking requires HTTPS browser origins
+  ---
+  duration_ms: 4.6889
+  type: 'test'
+  ...
+# {"event":"request_failed","requestId":"8d621fee-c2c4-4a04-9e39-19fc00fcdd1c","status":503}
+# Subtest: tracking defaults off and does not break existing route browsing
+ok 2 - tracking defaults off and does not break existing route browsing
+  ---
+  duration_ms: 100.7264
+  type: 'test'
+  ...
+# Subtest: device authorization is admin-only, bus-scoped, expiring and never exposes stored credentials
+ok 3 - device authorization is admin-only, bus-scoped, expiring and never exposes stored credentials
+  ---
+  duration_ms: 146.4059
+  type: 'test'
+  ...
+# Subtest: trip start requires consent, active bus authorization and correct device scope
+ok 4 - trip start requires consent, active bus authorization and correct device scope
+  ---
+  duration_ms: 74.4901
+  type: 'test'
+  ...
+# Subtest: concurrent dispatch requests cannot create two active trips for the same bus
+ok 5 - concurrent dispatch requests cannot create two active trips for the same bus
+  ---
+  duration_ms: 43.7775
+  type: 'test'
+  ...
+# Subtest: GPS uploads persist current state/history with server receipt time and private device IDs
+ok 6 - GPS uploads persist current state/history with server receipt time and private device IDs
+  ---
+  duration_ms: 32.684
+  type: 'test'
+  ...
+# Subtest: coordinate bounds, accuracy, fresh timestamps and strict permitted fields reject unsafe locations
+ok 7 - coordinate bounds, accuracy, fresh timestamps and strict permitted fields reject unsafe locations
+  ---
+  duration_ms: 62.4791
+  type: 'test'
+  ...
+# Subtest: update frequency, replayed timestamps and improbable speed jumps are rejected without history writes
+ok 8 - update frequency, replayed timestamps and improbable speed jumps are rejected without history writes
+  ---
+  duration_ms: 42.104
+  type: 'test'
+  ...
+# Subtest: drivers cannot upload or end another trip, mutate campus data or access admin history/analytics
+ok 9 - drivers cannot upload or end another trip, mutate campus data or access admin history/analytics
+  ---
+  duration_ms: 74.7141
+  type: 'test'
+  ...
+# Subtest: stale fixes become offline without coordinates, and expired leases cannot resume without a new consented trip
+ok 10 - stale fixes become offline without coordinates, and expired leases cannot resume without a new consented trip
+  ---
+  duration_ms: 48.1076
+  type: 'test'
+  ...
+# Subtest: ending a trip clears latest coordinates and immediately removes it from the public feed
+ok 11 - ending a trip clears latest coordinates and immediately removes it from the public feed
+  ---
+  duration_ms: 40.4265
+  type: 'test'
+  ...
+# Subtest: revoking a device or disabling its bus hides GPS and blocks updates and session renewal
+ok 12 - revoking a device or disabling its bus hides GPS and blocks updates and session renewal
+  ---
+  duration_ms: 75.7989
+  type: 'test'
+  ...
+# Subtest: admin can dispatch/end assigned trips, list abandoned metadata without GPS and ordinary drivers can renew sessions
+ok 13 - admin can dispatch/end assigned trips, list abandoned metadata without GPS and ordinary drivers can renew sessions
+  ---
+  duration_ms: 31.4163
+  type: 'test'
+  ...
+# {"event":"request_failed","requestId":"81ab3eb1-5ca2-4f61-9804-23ff17414793","status":503}
+# Subtest: missing retention/uniqueness indexes and expired grants fail closed before trip creation
+ok 14 - missing retention/uniqueness indexes and expired grants fail closed before trip creation
+  ---
+  duration_ms: 21.0784
+  type: 'test'
+  ...
+# {"event":"request_failed","requestId":"b3cfe952-32bf-4eac-8f54-67f7dda71f5e","status":500}
+# Subtest: history write failure rolls back current location and suppresses transport notifications
+ok 15 - history write failure rolls back current location and suppresses transport notifications
+  ---
+  duration_ms: 25.3156
+  type: 'test'
+  ...
+# Subtest: tracking session/upload limits include malformed attempts before parsing or database access
+ok 16 - tracking session/upload limits include malformed attempts before parsing or database access
+  ---
+  duration_ms: 19.6023
+  type: 'test'
+  ...
+# Subtest: free periods are calculated independently per weekday, including short gaps
+ok 17 - free periods are calculated independently per weekday, including short gaps
+  ---
+  duration_ms: 51.2612
+  type: 'test'
+  ...
+# Subtest: availability timestamps distinguish calculation from source updates and never assert presence
+ok 18 - availability timestamps distinguish calculation from source updates and never assert presence
+  ---
+  duration_ms: 32.7536
+  type: 'test'
+  ...
+# Subtest: strict HH:MM, overlaps, window boundaries and leave rules apply in Mongoose
+ok 19 - strict HH:MM, overlaps, window boundaries and leave rules apply in Mongoose
+  ---
+  duration_ms: 25.1152
+  type: 'test'
+  ...
+# Subtest: faculty search API supports name, department, cabin, block and multiword queries
+ok 20 - faculty search API supports name, department, cabin, block and multiword queries
+  ---
+  duration_ms: 124.0509
+  type: 'test'
+  ...
+# Subtest: public day-specific summaries and private timetable updates retain owner permissions
+ok 21 - public day-specific summaries and private timetable updates retain owner permissions
+  ---
+  duration_ms: 132.7005
+  type: 'test'
+  ...
+# Subtest: building IDs validate reference targets, survive renamed labels and prevent orphan deletion
+ok 22 - building IDs validate reference targets, survive renamed labels and prevent orphan deletion
+  ---
+  duration_ms: 48.1951
+  type: 'test'
+  ...
+# Subtest: legacy coordinates and allocations remain unverified without an official source/date
+ok 23 - legacy coordinates and allocations remain unverified without an official source/date
+  ---
+  duration_ms: 11.3041
+  type: 'test'
+  ...
+# Subtest: migration dry-run only proposes exact, unambiguous missing links and preserves existing IDs
+ok 24 - migration dry-run only proposes exact, unambiguous missing links and preserves existing IDs
+  ---
+  duration_ms: 1.1506
+  type: 'test'
+  ...
+# Subtest: reviewed migration apply is idempotent, audited and skips stale source labels
+ok 25 - reviewed migration apply is idempotent, audited and skips stale source labels
+  ---
+  duration_ms: 8.8161
+  type: 'test'
+  ...
+# Subtest: health responds without a database connection
+ok 26 - health responds without a database connection
+  ---
+  duration_ms: 50.9144
+  type: 'test'
+  ...
+# Subtest: chat rejects malformed or oversized messages before retrieving data
+ok 27 - chat rejects malformed or oversized messages before retrieving data
+  ---
+  duration_ms: 125.8803
+  type: 'test'
+  ...
+# Subtest: login rejects object selectors and nonstring passwords
+ok 28 - login rejects object selectors and nonstring passwords
+  ---
+  duration_ms: 19.3977
+  type: 'test'
+  ...
+# Subtest: analytics rejects anonymous, invalid, and faculty tokens
+ok 29 - analytics rejects anonymous, invalid, and faculty tokens
+  ---
+  duration_ms: 18.9492
+  type: 'test'
+  ...
+# Subtest: all collection writes require admin authorization before database access
+ok 30 - all collection writes require admin authorization before database access
+  ---
+  duration_ms: 36.5622
+  type: 'test'
+  ...
+# {"event":"request_failed","requestId":"d15ea834-5a66-43e5-96d0-1dcd03d87457","status":503}
+# {"event":"request_failed","requestId":"bdfb1da0-8d91-4519-bdb1-289ec46fb403","status":503}
+# Subtest: missing signing configuration fails closed
+ok 31 - missing signing configuration fails closed
+  ---
+  duration_ms: 8.3497
+  type: 'test'
+  ...
+# Subtest: new faculty documents never serialize password hashes
+ok 32 - new faculty documents never serialize password hashes
+  ---
+  duration_ms: 11.0505
+  type: 'test'
+  ...
+# Subtest: missing MongoDB URI fails before connecting
+ok 33 - missing MongoDB URI fails before connecting
+  ---
+  duration_ms: 0.7198
+  type: 'test'
+  ...
+# Subtest: production configuration refuses missing secret/admin/origin before startup
+ok 34 - production configuration refuses missing secret/admin/origin before startup
+  ---
+  duration_ms: 269.2842
+  type: 'test'
+  ...
+# Subtest: production executable exits before database access when required configuration is absent
+ok 35 - production executable exits before database access when required configuration is absent
+  ---
+  duration_ms: 1089.7913
+  type: 'test'
+  ...
+# Subtest: Helmet, exact CORS and JSON body limits apply to the API
+ok 36 - Helmet, exact CORS and JSON body limits apply to the API
+  ---
+  duration_ms: 579.3831
+  type: 'test'
+  ...
+# Subtest: admin and faculty login still issue usable sessions without exposing hashes
+ok 37 - admin and faculty login still issue usable sessions without exposing hashes
+  ---
+  duration_ms: 388.5302
+  type: 'test'
+  ...
+# Subtest: every resource rejects anonymous mutations and faculty admin-only mutations
+ok 38 - every resource rejects anonymous mutations and faculty admin-only mutations
+  ---
+  duration_ms: 120.168
+  type: 'test'
+  ...
+# Subtest: faculty may update their own profile and timetable but cannot escalate privileges
+ok 39 - faculty may update their own profile and timetable but cannot escalate privileges
+  ---
+  duration_ms: 73.9144
+  type: 'test'
+  ...
+# Subtest: admin CRUD works across all resource schemas and records safe audit entries
+ok 40 - admin CRUD works across all resource schemas and records safe audit entries
+  ---
+  duration_ms: 441.9986
+  type: 'test'
+  ...
+# Subtest: unknown fields, MongoDB operators, invalid IDs/query values and invalid records are rejected
+ok 41 - unknown fields, MongoDB operators, invalid IDs/query values and invalid records are rejected
+  ---
+  duration_ms: 46.4752
+  type: 'test'
+  ...
+# Subtest: public lists/details omit hostel private data and faculty login details even with an admin token
+ok 42 - public lists/details omit hostel private data and faculty login details even with an admin token
+  ---
+  duration_ms: 38.7507
+  type: 'test'
+  ...
+# Subtest: pagination preserves array responses and bounded literal search
+ok 43 - pagination preserves array responses and bounded literal search
+  ---
+  duration_ms: 10.9328
+  type: 'test'
+  ...
+# {"event":"query_log_unavailable","requestId":"96bc6334-0144-4361-a9d2-b111d5c551ac"}
+# Subtest: chat logs stay admin-only and logging failure preserves a successful answer
+ok 44 - chat logs stay admin-only and logging failure preserves a successful answer
+  ---
+  duration_ms: 9.7326
+  type: 'test'
+  ...
+# {"event":"request_failed","requestId":"96e22ecc-ac48-4cd4-8bb7-5f69eae2b9c9","status":503}
+# Subtest: audit unavailability blocks writes before data changes
+ok 45 - audit unavailability blocks writes before data changes
+  ---
+  duration_ms: 3.5667
+  type: 'test'
+  ...
+# Subtest: local seed guards reject production, remote targets and unconfirmed resets
+ok 46 - local seed guards reject production, remote targets and unconfirmed resets
+  ---
+  duration_ms: 0.8692
+  type: 'test'
+  ...
+# Subtest: insert-only seed upserts are idempotent and preserve owner edits
+ok 47 - insert-only seed upserts are idempotent and preserve owner edits
+  ---
+  duration_ms: 1.9785
+  type: 'test'
+  ...
+# Subtest: login/chat rate limits return 429 and proxy trust remains disabled
+ok 48 - login/chat rate limits return 429 and proxy trust remains disabled
+  ---
+  duration_ms: 347.54
+  type: 'test'
+  ...
+# {"event":"request_failed","requestId":"df95a108-11a1-4964-ac1e-f7b43a2fcc61","status":500}
+# Subtest: central errors do not disclose driver/provider messages or query data
+ok 49 - central errors do not disclose driver/provider messages or query data
+  ---
+  duration_ms: 3.2694
+  type: 'test'
+  ...
+# Subtest: AI retrieval uses public projections even if persistence returns private fields
+ok 50 - AI retrieval uses public projections even if persistence returns private fields
+  ---
+  duration_ms: 2.746
+  type: 'test'
+  ...
+# Subtest: product search matches item names, aliases and categories within the same item; pages remain arrays
+ok 51 - product search matches item names, aliases and categories within the same item; pages remain arrays
+  ---
+  duration_ms: 242.6869
+  type: 'test'
+  ...
+# Subtest: legacy reports stay unconfirmed, preserve prices, and never expose owner IDs or hostel contact
+ok 52 - legacy reports stay unconfirmed, preserve prices, and never expose owner IDs or hostel contact
+  ---
+  duration_ms: 22.84
+  type: 'test'
+  ...
+# Subtest: assigned owners report price and stock independently; actors are stored but public responses expose role only
+ok 53 - assigned owners report price and stock independently; actors are stored but public responses expose role only
+  ---
+  duration_ms: 66.3309
+  type: 'test'
+  ...
+# Subtest: owners cannot write other shops, structural fields, provenance, assignments, admin queues or faculty self-service
+ok 54 - owners cannot write other shops, structural fields, provenance, assignments, admin queues or faculty self-service
+  ---
+  duration_ms: 61.1854
+  type: 'test'
+  ...
+# Subtest: admin reassignment immediately removes former owner scope; suspension and reapproval revoke old sessions
+ok 55 - admin reassignment immediately removes former owner scope; suspension and reapproval revoke old sessions
+  ---
+  duration_ms: 84.7122
+  type: 'test'
+  ...
+# Subtest: self-registration cannot approve or assign itself; approval enables separate owner login
+ok 56 - self-registration cannot approve or assign itself; approval enables separate owner login
+  ---
+  duration_ms: 1078.9899
+  type: 'test'
+  ...
+# Subtest: weekly/weekend schedules respect Kolkata midnight and explicit exceptions over holidays
+ok 57 - weekly/weekend schedules respect Kolkata midnight and explicit exceptions over holidays
+  ---
+  duration_ms: 54.5163
+  type: 'test'
+  ...
+# Subtest: student feedback stays private until admin moderation and never mutates stock automatically
+ok 58 - student feedback stays private until admin moderation and never mutates stock automatically
+  ---
+  duration_ms: 27.107
+  type: 'test'
+  ...
+# Subtest: legacy admin menu editing preserves item identity/provenance and archives omitted entries
+ok 59 - legacy admin menu editing preserves item identity/provenance and archives omitted entries
+  ---
+  duration_ms: 15.3472
+  type: 'test'
+  ...
+# Subtest: additive migration plans preserve inventory, prices and provenance and are idempotent
+ok 60 - additive migration plans preserve inventory, prices and provenance and are idempotent
+  ---
+  duration_ms: 0.9114
+  type: 'test'
+  ...
+# Subtest: unmigrated raw shops remain searchable and unclassified filters include missing categories
+ok 61 - unmigrated raw shops remain searchable and unclassified filters include missing categories
+  ---
+  duration_ms: 9.4789
+  type: 'test'
+  ...
+# Subtest: archiving and restoring preserve provenance; duplicate names, invalid IDs and privileged views fail safely
+ok 62 - archiving and restoring preserve provenance; duplicate names, invalid IDs and privileged views fail safely
+  ---
+  duration_ms: 55.963
+  type: 'test'
+  ...
+# Subtest: only an admin can verify a listing and verification never confirms inventory
+ok 63 - only an admin can verify a listing and verification never confirms inventory
+  ---
+  duration_ms: 16.1223
+  type: 'test'
+  ...
+# {"event":"request_failed","requestId":"00e1be50-83f6-4c7b-915e-642ff5e51115","status":503}
+# Subtest: registration and feedback rate limits reject abuse and unavailable audit logging blocks owner mutations
+ok 64 - registration and feedback rate limits reject abuse and unavailable audit logging blocks owner mutations
+  ---
+  duration_ms: 26.7878
+  type: 'test'
+  ...
+# {"event":"request_failed","requestId":"3a185af5-6269-4224-9a13-7b866ee1508b","status":503}
+# Subtest: registration fails closed when the unique account email index is not provisioned
+ok 65 - registration fails closed when the unique account email index is not provisioned
+  ---
+  duration_ms: 386.8028
+  type: 'test'
+  ...
+1..65
+# tests 65
+# suites 0
+# pass 65
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5016.3162

@@ -1,0 +1,88 @@
+
+> campusx-client@1.0.0 test
+> npm run test:unit && npm run test:components
+
+
+> campusx-client@1.0.0 test:unit
+> node --test test/api.test.js
+
+TAP version 13
+# Subtest: driver API requests use the device session instead of a saved admin token and never persist credentials
+ok 1 - driver API requests use the device session instead of a saved admin token and never persist credentials
+  ---
+  duration_ms: 27.4876
+  type: 'test'
+  ...
+# Subtest: shop search encodes filters, preserves page headers and rejects malformed collections
+ok 2 - shop search encodes filters, preserves page headers and rejects malformed collections
+  ---
+  duration_ms: 4.3281
+  type: 'test'
+  ...
+# Subtest: owner login uses its dedicated endpoint and feedback does not invalidate collection views
+ok 3 - owner login uses its dedicated endpoint and feedback does not invalidate collection views
+  ---
+  duration_ms: 1.5988
+  type: 'test'
+  ...
+# Subtest: HTTP errors retain the API message and status
+ok 4 - HTTP errors retain the API message and status
+  ---
+  duration_ms: 1.3598
+  type: 'test'
+  ...
+# Subtest: non-JSON HTTP errors have a useful fallback
+ok 5 - non-JSON HTTP errors have a useful fallback
+  ---
+  duration_ms: 1.4026
+  type: 'test'
+  ...
+# Subtest: JSON null error bodies retain the HTTP failure
+ok 6 - JSON null error bodies retain the HTTP failure
+  ---
+  duration_ms: 0.5841
+  type: 'test'
+  ...
+# Subtest: successful API responses retain their shape
+ok 7 - successful API responses retain their shape
+  ---
+  duration_ms: 0.4748
+  type: 'test'
+  ...
+# Subtest: collection clients follow pagination while retaining arrays and public defaults
+ok 8 - collection clients follow pagination while retaining arrays and public defaults
+  ---
+  duration_ms: 0.9929
+  type: 'test'
+  ...
+# Subtest: admin lists and faculty profile explicitly request private views
+ok 9 - admin lists and faculty profile explicitly request private views
+  ---
+  duration_ms: 0.7667
+  type: 'test'
+  ...
+# Subtest: Leaflet text escapes markup and attribute delimiters
+ok 10 - Leaflet text escapes markup and attribute delimiters
+  ---
+  duration_ms: 0.5774
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 152.8826
+
+> campusx-client@1.0.0 test:components
+> jest --runInBand --config jest.config.cjs
+
+
+Test Suites: 8 passed, 8 total
+Tests:       48 passed, 48 total
+Snapshots:   0 total
+Time:        7.739 s, estimated 8 s
+Ran all test suites.

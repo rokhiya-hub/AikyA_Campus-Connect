@@ -1,0 +1,5 @@
+
+> campusx-client@1.0.0 test:notifications-browser
+> node browser-tests/notifications-smoke.cjs
+
+PASS: mobile in-app read persistence, refresh/outage/retry, keyboard menu close/focus return, timezone-independent admin scheduling, landing updates link, no permission prompt, no horizontal overflow or page errors. HTTP fixtures only; no real notifications sent.

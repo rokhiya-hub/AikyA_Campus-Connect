@@ -1,0 +1,82 @@
+
+> campusx-client@1.0.0 test
+> npm run test:unit && npm run test:components
+
+
+> campusx-client@1.0.0 test:unit
+> node --test test/api.test.js
+
+TAP version 13
+# Subtest: shop search encodes filters, preserves page headers and rejects malformed collections
+ok 1 - shop search encodes filters, preserves page headers and rejects malformed collections
+  ---
+  duration_ms: 31.3955
+  type: 'test'
+  ...
+# Subtest: owner login uses its dedicated endpoint and feedback does not invalidate collection views
+ok 2 - owner login uses its dedicated endpoint and feedback does not invalidate collection views
+  ---
+  duration_ms: 1.2597
+  type: 'test'
+  ...
+# Subtest: HTTP errors retain the API message and status
+ok 3 - HTTP errors retain the API message and status
+  ---
+  duration_ms: 0.7797
+  type: 'test'
+  ...
+# Subtest: non-JSON HTTP errors have a useful fallback
+ok 4 - non-JSON HTTP errors have a useful fallback
+  ---
+  duration_ms: 0.6268
+  type: 'test'
+  ...
+# Subtest: JSON null error bodies retain the HTTP failure
+ok 5 - JSON null error bodies retain the HTTP failure
+  ---
+  duration_ms: 0.5153
+  type: 'test'
+  ...
+# Subtest: successful API responses retain their shape
+ok 6 - successful API responses retain their shape
+  ---
+  duration_ms: 1.1416
+  type: 'test'
+  ...
+# Subtest: collection clients follow pagination while retaining arrays and public defaults
+ok 7 - collection clients follow pagination while retaining arrays and public defaults
+  ---
+  duration_ms: 1.2394
+  type: 'test'
+  ...
+# Subtest: admin lists and faculty profile explicitly request private views
+ok 8 - admin lists and faculty profile explicitly request private views
+  ---
+  duration_ms: 0.7685
+  type: 'test'
+  ...
+# Subtest: Leaflet text escapes markup and attribute delimiters
+ok 9 - Leaflet text escapes markup and attribute delimiters
+  ---
+  duration_ms: 0.4901
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 159.6191
+
+> campusx-client@1.0.0 test:components
+> jest --runInBand --config jest.config.cjs
+
+
+Test Suites: 6 passed, 6 total
+Tests:       33 passed, 33 total
+Snapshots:   0 total
+Time:        7.114 s
+Ran all test suites.

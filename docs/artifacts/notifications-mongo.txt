@@ -1,0 +1,5 @@
+
+> campusx-server@1.0.0 test:notifications:local
+> node integration-tests/notifications.local.cjs
+
+PASS: real MongoDB unique concurrent claims, restart deduplication, scoped idempotent read/unread, interrupted claims, cancellation and TTL index definitions. Push transport mocked; no network push sent.

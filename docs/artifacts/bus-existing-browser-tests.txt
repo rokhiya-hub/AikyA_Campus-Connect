@@ -1,0 +1,7 @@
+
+> campusx-client@1.0.0 test:browser
+> node browser-tests/campus-smoke.cjs
+
+Shop browser smoke PASS: mobile product search, unverified labels, feedback submission, owner login and stock editing, admin moderation and suspension; no horizontal overflow.
+Browser smoke PASS: real Leaflet marker/floor selection, theme tiles, mobile search/directions, GPS accuracy, stable-ID navigation, dashboard outage/retry; no page errors or horizontal overflow.
+Screenshots: docs/artifacts/campus-map-desktop.png and campus-map-mobile.png (synthetic fixtures; tiles stubbed).

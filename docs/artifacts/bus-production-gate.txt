@@ -1,0 +1,5 @@
+
+> campusx-client@1.0.0 test:tracking-build
+> node browser-tests/check-tracking-build.cjs
+
+Tracking production build PASS: development bus fixture excluded from all JavaScript assets.
