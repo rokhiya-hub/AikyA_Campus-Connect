@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.local
+.env.*
+!.env.example
+*.pem
+*.key
+.vapid*.json
+dist/
+build/
+*.log
+*.bak
+.DS_Store
